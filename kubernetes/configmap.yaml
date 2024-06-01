@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-config
+data:
+  database_host: "mysql-server-0.mysql-service.default.svc.cluster.local"
+  db_name: "flask_db"
