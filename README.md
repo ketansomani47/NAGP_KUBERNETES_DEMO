@@ -21,17 +21,17 @@ This section is containing the details about the flask application endpoints:
 
 * GET Endpoint for Server Check
     
-    `http://<loadbalancer_external_ip>:80/`
+    `http://nagp.flaskapp.com:80/v1/`
 
 
 * GET Endpoint for User List
     
-    `http://<loadbalancer_external_ip>:80/get_user`
+    `http://nagp.flaskapp.com:80/v1/get_user`
 
 
 * POST Endpoint for Adding User
     
-    `http://<loadbalancer_external_ip>:80/add_user`
+    `http://nagp.flaskapp.com:80/v1/add_user`
 
     Input Payload:
     
@@ -68,7 +68,12 @@ This section is containing the details about the flask application endpoints:
 * Flask Application Deployment:
   1. Run command `kubectl apply -f configmap.yaml` to create Config Map.
   2. Run command `kubectl apply -f flask-deployment.yaml` to create flask application pods.
-  3. Run command `kubectl apply -f flask-service.yaml` to create Load Balancer Service.
+  3. Run command `kubectl apply -f flask-nodeport.yaml` to create Node Port Service.
+  4. Run command `gcloud compute firewall-rules create nodeport-rule --allow tcp:32000 --project <project_id>` to enable firewall for nodeport.
+* Ingress Deployment:
+  1. Run command `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml` to create ingress-nginx controller.
+  2. Run command `kubectl apply -f flask-ingress.yaml` to create ingress for flask application.
+  3. Once ingress is created and running, we need to add ingress's external IP and domain `nagp.flaskapp.com` to hosts file at `/etc/hosts` location.
 * Horizontal Pod AutoScaling:
   1. Run command `kubectl apply -f flask-autoscaling.yaml` to create HPA on flask deployment.
 

@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: "flask-app-container"
-        image: "ketansomani/nagp_flask:latest"
+        image: "ketansomani/nagp_flask:1.0"
         resources:
           requests:
             cpu: "300m"
