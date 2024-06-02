@@ -44,7 +44,7 @@ This section is containing the details about the flask application endpoints:
 
 
 ## Recording Link
-[Recording-Link]()
+[Recording-Link](https://nagarro-my.sharepoint.com/:v:/p/ketan_somani/EXWTAhhd6QpOvCKw7JPDLH8BgxTGLCfUm3OGBdJnE_cEUQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=xeR6Uh)
 
 
 ## Deployment Steps
