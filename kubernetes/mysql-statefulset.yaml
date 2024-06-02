@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: mysql-server
 spec:
-  # serviceName: mysql-service
+  serviceName: mysql-service
   selector:
     matchLabels:
       app: mysql-pod
